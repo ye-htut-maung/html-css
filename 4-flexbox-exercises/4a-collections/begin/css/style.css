@@ -1,0 +1,111 @@
+/* colors - see style guide for docs. 
+Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
+
+:root {
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #3d9397;
+    --color4: #94d28d;
+    --color5: #e9d8a6;
+    --color6: #ee9800;
+    --color7: #ca6702;
+    --color8: #bb3e03;
+    --color9: #ae2012;
+    --color10: #9b2226;
+}
+
+
+/* generic site styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #DBE5DE;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+
+
+
+figure {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    border: 5px solid black;
+    margin-bottom: 0.7rem;
+    border-radius: 5px;
+}
+
+figcaption {
+
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* At this breakpoint, transition to 2 figures per line */
+
+@media (min-width: 550px) {
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2%;
+    }
+
+    li {
+        width: 49%
+    }
+}
+
+
+/* At this breakpoint, transition to 3 figures per line */
+
+@media (min-width: 800px) {
+    li {
+        width: 32%;
+    }
+}
